@@ -1,0 +1,29 @@
+
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Score</th>
+            <th scope="col">Group</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let each of studentScores">
+            <th scope="row">{{each.id}}</th>
+            <td>{{each.name}}</td>
+            <td *ngIf="each.gender == 'man' ">
+                <i class="bi bi-gender-male"></i>
+            </td>
+            <td *ngIf="each.gender == 'women' ">
+                <i class="bi bi-gender-female"></i>
+            </td>
+            <td>{{each.score}}</td>
+            <td>{{each.group}}</td>
+        </tr>
+    </tbody>
+</table>
+
